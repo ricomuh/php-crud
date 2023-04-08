@@ -26,6 +26,36 @@ Penjelasan tiap kode sudah saya tulis di dalamnya menggunakan komentar. Jadi, te
 
 5. Jalankan aplikasi dengan mengakses `http://localhost/php-crud/`
 
+## Penjelasan Tiap File
+
+### index.php
+
+Pada file ini, kita akan menampilkan data dari tabel `students` ke dalam tabel HTML.
+
+### tambah.php
+
+Pada file ini, kita akan membuat form untuk menambahkan data ke dalam tabel `students`.
+
+### tambah_aksi.php
+
+Pada file ini, kita akan membuat proses untuk menambahkan data yang dikirim dari form `tambah.php` ke dalam tabel `students`.
+
+### edit.php
+
+Pada file ini, kita akan membuat form untuk mengubah data yang ada di dalam tabel `students`.
+
+### update.php
+
+Pada file ini, kita akan membuat proses untuk mengubah data yang dikirim dari form `edit.php` ke dalam tabel `students`.
+
+### hapus.php
+
+Pada file ini, kita akan membuat proses untuk menghapus data dari tabel `students`.
+
+### lib/koneksi.php
+
+Pada file ini, kita akan membuat koneksi ke database MySQL.
+
 ## Fitur
 
 - [x] Create
