@@ -15,7 +15,7 @@ include_once "lib/koneksi.php";
 $query = "SELECT * FROM students WHERE nim = '$nim'";
 // query ini akan mengambil data mahasiswa dari database dengan nilai nim sesuai dengan yang dikirim dari halaman index.php
 
-// q: kenapa kita perlu mengambil data mahasiswa berdasarkan nim? pada halaman edit.php hanya berisikan form untuk mengedit data mahasiswa
+// q: kenapa kita perlu mengambil data mahasiswa berdasarkan nim? padahal halaman edit.php hanya berisikan form untuk mengedit data mahasiswa
 // a: karena kita hanya akan mengedit data mahasiswa yang sudah ada di database, bukan menambahkan data baru. kita juga perlu mengetahui data mahasiswa yang akan kita edit
 
 // mengeksekusi query
@@ -27,9 +27,10 @@ if (!$result)
     die("Query Error: " . mysqli_errno($db) . " - " . mysqli_error($db));
 
 // mengambil data mahasiswa dari database
-// karena kita hanya mengambil data berdasarkan nim, maka kita hanya perlu menggunakan mysqli_fetch_assoc()
+// karena kita hanya mengambil 1 data berdasarkan nim, maka kita hanya perlu menggunakan mysqli_fetch_assoc()
 // mysqli_fetch_assoc() akan mengembalikan nilai array yang berisi data mahasiswa
-$student = mysqli_fetch_assoc($result); // $student adalah variable array yang berisi data mahasiswa
+$student = mysqli_fetch_assoc($result); // $student adalah variable array yang berisi 1 data mahasiswa
+// pada halaman index.php, kita juga menggunakan mysqli_fetch_assoc() dalam looping berbentuk while, sehingga kita bisa menampilkan banyak data mahasiswa
 
 ?>
 <!DOCTYPE html>
@@ -43,7 +44,7 @@ $student = mysqli_fetch_assoc($result); // $student adalah variable array yang b
     <!-- ini adalah css dari bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <!-- title berdasarkan nama mahasiswa -->
-    <title>Edit Mahasiswa - <?= $student['name']; ?></title>
+    <title>Edit Mahasiswa - <?= $student['nama']; ?></title>
 
 </head>
 
