@@ -14,9 +14,17 @@ Penjelasan tiap kode sudah saya tulis di dalamnya menggunakan komentar. Jadi, te
 
 2. Buat database baru di phpmyadmin dengan nama bebas, misalnya `db_kampus`
 
-3. Atur konfigurasi database di file `lib/koneksi.php`
+3. Buat tabel baru dengan nama `students` dan struktur kolom seperti berikut:
 
-4. Jalankan aplikasi dengan mengakses `http://localhost/php-crud/`
+| Field  | Type        | Null | Key | Default | Extra |
+| ------ | ----------- | ---- | --- | ------- | ----- |
+| nim    | varchar(12) | NO   | PRI | NULL    |       |
+| nama   | varchar(50) | NO   |     | NULL    |       |
+| alamat | varchar(50) | NO   |     | NULL    |       |
+
+4. Atur konfigurasi database di file `lib/koneksi.php`
+
+5. Jalankan aplikasi dengan mengakses `http://localhost/php-crud/`
 
 ## Fitur
 
