@@ -55,6 +55,12 @@ if (!$result)
      *  penggunaan kode php di dalam html adalah sebagai berikut:
      * <?php kode php ?>
      * kita bisa menggunakan kode php di mana saja di dalam html asalkan file tersebut berformat .php
+     * 
+     * sedangkan untuk menampilkan data dari php ke html, kita bisa menggunakan kode seperti ini:
+     * <?= data ?>
+     * ini sama saja dengan menggunakan kode seperti ini:
+     * <?php echo data ?>
+     * 
      */
     ?>
 
